@@ -6,7 +6,8 @@
 
 - Mathematics in Lean（MIL）第 2、3 章；
 - 带中文注释的 Lean 入门示例与 statement 练习；
-- `pi` 的反正切恒等式，以及一份不使用积分的 `pi` 无理性完整证明。
+- 从 statement、定理检索到 AI 证明的 `pi` 四步工作流，以及一份不使用积分的
+  `pi` 无理性完整证明。
 
 项目固定使用 Lean 4.31.0 与 Mathlib 4.31.0，适合从 GitHub 克隆，
 也适合直接导入 ReasLab。
@@ -19,8 +20,9 @@
 2. `MIL/C02_Basics/`：计算、改写、调用定理和代数结构。
 3. `MIL/C03_Logic/`：蕴含、量词、否定、合取、析取和收敛。
 4. `Course/StatementExercises.lean`：把十个自然语言命题翻译成 Lean statement。
-5. `Course/PiExamples.lean`：阅读 `arctan 1 = pi / 4` 与 Machin 公式。
-6. `docs/pi-irrational-proof-zh.md`：先读自然语言证明，再进入 `PiNoIntegral/`。
+5. `Course/PiWorkflow/`：依次完成 statement、定理检索、自然语言证明和 Lean 证明。
+6. `Course/PiExamples.lean`：把 Machin 公式作为补充例子。
+7. `docs/pi-irrational-proof-zh.md`：先读自然语言证明，再进入 `PiNoIntegral/`。
 
 在编辑器中，把光标依次放在每条 tactic 后面，观察目标和局部假设怎样变化。
 遇到不熟悉的名字时，可先用 `#check 定理名` 确认它的类型。
@@ -65,7 +67,8 @@ lake build PiNoIntegral
 1. 在 ReasLab 中选择从 GitHub 创建或导入项目。
 2. 填入 `https://github.com/TropicalFatFish/lean-mil-pi-course`。
 3. 等待依赖初始化完成，然后打开 `Course/LeanBasics.lean`。
-4. 光标移到证明内部，确认目标窗口能够显示 Lean 的当前 proof state。
+4. 依次打开 `Course/PiWorkflow/` 中的四个阶段文件；不要先打开较重的 `Main.lean`。
+5. 光标移到证明内部，确认 Infoview 能够显示 Lean 的当前 proof state。
 
 仓库根目录已经包含 `lean-toolchain`、`lakefile.toml` 和
 `lake-manifest.json`，无需在 ReasLab 中另建 Lake 项目。
@@ -73,7 +76,7 @@ lake build PiNoIntegral
 ## 目录结构
 
 ```text
-Course/             中文注释的课堂入口、statement 练习和 pi 短例子
+Course/             中文注释的 Lean 入门、statement 练习和 pi 四步工作流
 MIL/C02_Basics/     Mathematics in Lean 第 2 章（含 solutions）
 MIL/C03_Logic/      Mathematics in Lean 第 3 章（含 solutions）
 PiNoIntegral/       pi 无理性证明的三个模块

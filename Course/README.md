@@ -2,12 +2,18 @@
 
 1. `LeanBasics.lean`：从函数类型、命题类型到常用 tactic。
 2. `StatementExercises.lean`：十道只写命题、不写证明的练习。
-3. `PiExamples.lean`：`arctan 1 = pi/4` 与 Machin 公式。
-4. `../PiNoIntegral/PiIrrational.lean`：完整的 pi 无理性主定理。
+3. `PiWorkflow/Step1_Statement.lean`：先把 pi 相关结论写成 statement。
+4. `PiWorkflow/Step2_TheoremSearch.lean`：用 ReasLab 和 `#check` 查询候选定理。
+5. `PiWorkflow/Step3_NaturalLanguageProof.md`：让 AI 给出自然语言证明并人工审核。
+6. `PiWorkflow/Step4_AIGeneratedProof.lean`：让 AI 生成 Lean，再由 kernel 检查。
+7. `../PiNoIntegral/PiIrrational.lean`：进入完整的 pi 无理性综合项目。
+
+四步流程的具体课堂操作见 `PiWorkflow/README.md`。`PiExamples.lean` 中的
+Machin 公式作为补充例子保留，不属于这条主线。
 
 在编辑器或 ReasLab 中把光标依次放到每条 tactic 后面，观察 Infoview 中
-目标如何变化。先读 statement，再读当前假设，最后判断 tactic 需要交付
-哪种类型的证据。
+目标如何变化。先读 statement，再查询定理，然后审核自然语言证明，最后
+判断每条 tactic 是否交付了 Lean 当前要求的证据。
 
 `MIL/C02_Basics/` 和 `MIL/C03_Logic/` 中非 `solutions/` 文件是官方练习版，
 其中的 `sorry` 是有意留下的课堂填空；完整参考答案在相邻的 `solutions/`
