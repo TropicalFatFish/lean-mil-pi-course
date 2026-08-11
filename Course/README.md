@@ -8,3 +8,7 @@
 在编辑器或 ReasLab 中把光标依次放到每条 tactic 后面，观察 Infoview 中
 目标如何变化。先读 statement，再读当前假设，最后判断 tactic 需要交付
 哪种类型的证据。
+
+`MIL/C02_Basics/` 和 `MIL/C03_Logic/` 中非 `solutions/` 文件是官方练习版，
+其中的 `sorry` 是有意留下的课堂填空；完整参考答案在相邻的 `solutions/`
+目录中。`Course/` 与 `PiNoIntegral/` 的课程自有证明不含证明占位符。

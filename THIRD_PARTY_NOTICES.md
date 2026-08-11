@@ -11,3 +11,7 @@ Mathematics in Lean is distributed under the Apache License 2.0. The root
 `LICENSE` file contains the applicable license text. The course-owned files in
 this repository are released under the same license for a simple, compatible
 distribution.
+
+`MIL/C03_Logic/S06_Sequences_and_Convergence.lean` contains a two-line proof
+adaptation for compatibility with Lean 4.31.0. Its mathematical statement and
+the exercise placeholders are unchanged.

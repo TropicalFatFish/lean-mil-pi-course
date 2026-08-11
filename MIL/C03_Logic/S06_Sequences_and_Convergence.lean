@@ -1,6 +1,8 @@
 import MIL.Common
 import Mathlib.Data.Real.Basic
 
+/- This file contains a small Lean 4.31 compatibility edit; see THIRD_PARTY_NOTICES.md. -/
+
 namespace C03S06
 
 def ConvergesTo (s : ℕ → ℝ) (a : ℝ) :=
@@ -15,9 +17,10 @@ example (a b : ℝ) : |a| = |a - b + b| := by
   ring
 
 example {a : ℝ} (h : 1 < a) : a < a * a := by
-  convert (mul_lt_mul_iff_left₀ _).2 h
-  · rw [one_mul]
-  exact lt_trans zero_lt_one h
+  have ha : 0 < a := lt_trans zero_lt_one h
+  calc
+    a = 1 * a := by rw [one_mul]
+    _ < a * a := mul_lt_mul_of_pos_right h ha
 
 theorem convergesTo_const (a : ℝ) : ConvergesTo (fun _x : ℕ ↦ a) a := by
   intro ε εpos
@@ -100,4 +103,3 @@ def ConvergesTo' (s : α → ℝ) (a : ℝ) :=
   ∀ ε > 0, ∃ N, ∀ n ≥ N, |s n - a| < ε
 
 end
-
