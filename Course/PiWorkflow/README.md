@@ -4,14 +4,14 @@
 
 | 步骤 | 文件 | 学生要做什么 | 本步得到什么 |
 |---|---|---|---|
-| 1 | `Step1_Statement.lean` | 把自然语言命题写成 Lean 表达式 | 一个类型为 `Prop` 的 statement |
-| 2 | `Step2_TheoremSearch.lean` | 用 ReasLab 搜索和 `#check` 查询定理 | 候选定理及其精确类型 |
+| 1 | `Step1_TheoremSearch.lean` | 用 ReasLab 搜索定义、对象和定理，并用 `#check` 核对 | 可用于 statement 与证明的精确名字和类型 |
+| 2 | `Step2_Statement.lean` | 使用已经核对的名字把自然语言写成 Lean 表达式 | 一个类型为 `Prop` 的 statement |
 | 3 | `Step3_NaturalLanguageProof.md` | 让 AI 生成论证并人工找遗漏条件 | 经人工审核的证明路线 |
 | 4 | `Step4_AIGeneratedProof.lean` | 让 AI 写 Lean，并按 goal 和报错修改 | 由 Lean kernel 接受的证明项 |
 
 ## 课堂操作
 
-先打开第一步，只讨论 statement 中每个符号的类型。打开第二步后，在 ReasLab 左侧分别尝试 **Project Search** 和 **Semantic Search**，再把光标放到 `#check` 后面阅读 Infoview。
+先打开第一步，在 ReasLab 左侧分别尝试 **Project Search** 和 **Semantic Search**，再把光标放到 `#check` 后面阅读定义、对象和定理的完整类型。第二步只使用已经确认的名字书写 statement，并逐句翻回自然语言核对。
 
 第三步给出了可以直接发送给 ReasLab Agent 的自然语言提示词。得到回答后，学生先完成文件中的三项人工审核，不要因为语言流畅就默认正确。
 

@@ -1,9 +1,10 @@
 import Mathlib
 
 /-!
-# 第一步：只写 statement
+# 第二步：依据已查询的名字写 statement
 
-这一阶段不证明任何结论，只把自然语言翻译成 Lean 能理解的命题。
+先完成 `Step1_TheoremSearch.lean`，确认 `Real.arctan`、`Real.pi` 和
+`Irrational` 的类型。这一阶段不证明任何结论，只把自然语言翻译成 Lean 能理解的命题。
 `#check` 会要求 Lean 检查表达式的类型，但不会要求我们提供证明。
 -/
 

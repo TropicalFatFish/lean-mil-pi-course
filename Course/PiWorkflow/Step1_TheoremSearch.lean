@@ -2,7 +2,7 @@ import Mathlib
 import PiNoIntegral.PiIrrational
 
 /-!
-# 第二步：查询已有定理
+# 第一步：先查询定义与已有定理
 
 在 ReasLab 中可以按下面的顺序查询：
 
@@ -14,6 +14,11 @@ import PiNoIntegral.PiIrrational
 -/
 
 namespace Course.PiWorkflow
+
+-- 写 statement 前先确认这些名字分别表示什么对象。
+#check Real.arctan
+#check Real.pi
+#check (Irrational : ℝ → Prop)
 
 -- 把 arctan 等式化为两个目标：tan 的值，以及角度属于主值区间。
 #check Real.arctan_eq_of_tan_eq

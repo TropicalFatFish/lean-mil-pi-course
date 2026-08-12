@@ -1,8 +1,8 @@
 import Course.LeanBasics
 import Course.StatementExercises
 import Course.PiExamples
-import Course.PiWorkflow.Step1_Statement
-import Course.PiWorkflow.Step2_TheoremSearch
+import Course.PiWorkflow.Step1_TheoremSearch
+import Course.PiWorkflow.Step2_Statement
 import Course.PiWorkflow.Step4_AIGeneratedProof
 
 /-!

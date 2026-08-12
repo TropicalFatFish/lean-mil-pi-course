@@ -6,7 +6,7 @@
 
 - Mathematics in Lean（MIL）第 2、3 章；
 - 带中文注释的 Lean 入门示例与 statement 练习；
-- 从 statement、定理检索到 AI 证明的 `pi` 四步工作流，以及一份不使用积分的
+- 从定义与定理检索、statement 到 AI 证明的 `pi` 四步工作流，以及一份不使用积分的
   `pi` 无理性完整证明。
 
 项目固定使用 Lean 4.31.0 与 Mathlib 4.31.0，适合从 GitHub 克隆，
@@ -17,11 +17,11 @@
 建议按下面的顺序阅读：
 
 1. `Course/LeanBasics.lean`：从函数、类型和命题开始。
-2. `Course/StatementExercises.lean`：调用 AI，把自然语言命题翻译成 Lean statement。
+2. `Course/StatementExercises.lean`：在已导入 Mathlib、已打开 section 的空白页中，先查定义再调用 AI 写 statement。
 3. `Course/MILClassroomExercises.lean`：用 ReasLab 查询定理，按 MIL 第 2、3 章练典型 tactic。
 4. `MIL/C02_Basics/`：继续计算、改写、调用定理和代数结构。
 5. `MIL/C03_Logic/`：继续蕴含、量词、否定、合取、析取和收敛。
-6. `Course/PiWorkflow/`：依次完成 statement、定理检索、自然语言证明和 Lean 证明。
+6. `Course/PiWorkflow/`：依次完成定义与定理检索、statement、自然语言证明和 Lean 证明。
 7. `Course/PiExamples.lean`：把 Machin 公式作为补充例子。
 8. `docs/pi-irrational-proof-zh.md`：先读自然语言证明，再进入 `PiNoIntegral/`。
 
