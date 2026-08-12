@@ -65,12 +65,13 @@ lake build PiNoIntegral
 
 ## 从 ReasLab 导入
 
-1. 在 ReasLab 中选择从 GitHub 创建或导入项目。
-2. 填入 `https://github.com/TropicalFatFish/lean-mil-pi-course`。
-3. 等待依赖初始化完成，然后依次打开 `Course/LeanBasics.lean`、`Course/StatementExercises.lean` 和 `Course/MILClassroomExercises.lean`。
-4. 在 Semantic Search 中查询定理，再用 `#check` 核对完整类型。
-5. 依次打开 `Course/PiWorkflow/` 中的四个阶段文件；不要先打开较重的 `Main.lean`。
-6. 光标移到证明内部，确认 Infoview 能够显示 Lean 的当前 proof state。
+1. 打开 [ReasLab](https://reaslab.io/)；没有账号时可按[官方注册说明](https://docs.reaslab.io/zh/guides/sign-up.html)使用邮箱注册，已有已验证邮箱的 GitHub 账号也可授权登录。
+2. 进入 `Projects`，点击左侧 `Import Git`，选择手动输入仓库地址。
+3. 填入 `https://github.com/TropicalFatFish/lean-mil-pi-course`，Project Type 选择 `Theorem Proving`，再点击 `Import Project`。
+4. 等待依赖初始化完成，然后依次打开 `Course/LeanBasics.lean`、`Course/StatementExercises.lean` 和 `Course/MILClassroomExercises.lean`。
+5. 在 Semantic Search 中查询定理，再用 `#check` 核对完整类型。
+6. 依次打开 `Course/PiWorkflow/` 中的四个阶段文件；不要先打开较重的 `Main.lean`。
+7. 光标移到证明内部，确认底部 Lean 连接正常，并且 Infoview 能够显示当前 proof state。
 
 仓库根目录已经包含 `lean-toolchain`、`lakefile.toml` 和
 `lake-manifest.json`，无需在 ReasLab 中另建 Lake 项目。
