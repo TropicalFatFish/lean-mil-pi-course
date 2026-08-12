@@ -16,13 +16,14 @@
 
 建议按下面的顺序阅读：
 
-1. `Course/LeanBasics.lean`：从函数、类型和命题开始，认识常用 tactic。
-2. `MIL/C02_Basics/`：计算、改写、调用定理和代数结构。
-3. `MIL/C03_Logic/`：蕴含、量词、否定、合取、析取和收敛。
-4. `Course/StatementExercises.lean`：把十个自然语言命题翻译成 Lean statement。
-5. `Course/PiWorkflow/`：依次完成 statement、定理检索、自然语言证明和 Lean 证明。
-6. `Course/PiExamples.lean`：把 Machin 公式作为补充例子。
-7. `docs/pi-irrational-proof-zh.md`：先读自然语言证明，再进入 `PiNoIntegral/`。
+1. `Course/LeanBasics.lean`：从函数、类型和命题开始。
+2. `Course/StatementExercises.lean`：调用 AI，把自然语言命题翻译成 Lean statement。
+3. `Course/MILClassroomExercises.lean`：用 ReasLab 查询定理，按 MIL 第 2、3 章练典型 tactic。
+4. `MIL/C02_Basics/`：继续计算、改写、调用定理和代数结构。
+5. `MIL/C03_Logic/`：继续蕴含、量词、否定、合取、析取和收敛。
+6. `Course/PiWorkflow/`：依次完成 statement、定理检索、自然语言证明和 Lean 证明。
+7. `Course/PiExamples.lean`：把 Machin 公式作为补充例子。
+8. `docs/pi-irrational-proof-zh.md`：先读自然语言证明，再进入 `PiNoIntegral/`。
 
 在编辑器中，把光标依次放在每条 tactic 后面，观察目标和局部假设怎样变化。
 遇到不熟悉的名字时，可先用 `#check 定理名` 确认它的类型。
@@ -66,9 +67,10 @@ lake build PiNoIntegral
 
 1. 在 ReasLab 中选择从 GitHub 创建或导入项目。
 2. 填入 `https://github.com/TropicalFatFish/lean-mil-pi-course`。
-3. 等待依赖初始化完成，然后打开 `Course/LeanBasics.lean`。
-4. 依次打开 `Course/PiWorkflow/` 中的四个阶段文件；不要先打开较重的 `Main.lean`。
-5. 光标移到证明内部，确认 Infoview 能够显示 Lean 的当前 proof state。
+3. 等待依赖初始化完成，然后依次打开 `Course/LeanBasics.lean`、`Course/StatementExercises.lean` 和 `Course/MILClassroomExercises.lean`。
+4. 在 Semantic Search 中查询定理，再用 `#check` 核对完整类型。
+5. 依次打开 `Course/PiWorkflow/` 中的四个阶段文件；不要先打开较重的 `Main.lean`。
+6. 光标移到证明内部，确认 Infoview 能够显示 Lean 的当前 proof state。
 
 仓库根目录已经包含 `lean-toolchain`、`lakefile.toml` 和
 `lake-manifest.json`，无需在 ReasLab 中另建 Lake 项目。
